@@ -15,5 +15,5 @@ require 'action_view'
   title = ActionView::Base.full_sanitizer.sanitize(title).squish
   body = ActionView::Base.full_sanitizer.sanitize(body).squish.delete(' ')
   result = "#{title}\n#{body}"
-  File.open("./txt/#{id}", 'w+') { |file| file.write(result) } if result.present?
+  File.open("./txt/#{id}", 'w+') { |file| file.write(result) }
 end
